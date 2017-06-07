@@ -1,0 +1,189 @@
+@font-face {
+    font-family: Topaz;
+    src: "topaz.eot";
+}
+
+@font-face {
+    font-family: Topaz;
+    src: url(topaz.ttf);
+}
+
+* {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: Topaz;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    cursor: url(amiga.gif), default;
+}
+
+body {
+    counter-reset: bulletin;
+    counter-reset: day;
+    max-width: 40em;
+    margin: 20px auto 20px auto;
+    background-color: black;
+}
+
+b,
+s {
+    color: #488AC7;
+}
+
+body > h2 {
+    -webkit-position: sticky;
+    position: sticky;
+    top: 0px;
+    background: black;
+    z-index: 50;
+}
+
+body > h2 > a:after {
+    display: block;
+    text-align: center;
+    color: #f00;
+    background-color: #08f;
+    background-image: url("scanlines.png");
+    white-space: pre;
+    content: "       __                   \A       / /____  ___________ _\A";
+}
+
+body > h2:after {
+    display: block;
+    text-align: center;
+    color: #f80;
+    background-color: #00f;
+    background-image: url("scanlines.png");
+    white-space: pre;
+    content: "     / //_/ / / / ___/ __ `/\A     / ,< / /_/ / /  / /_/ / \A";
+}
+
+body > h2 + b:before {
+    display: block;
+    text-align: center;
+    color: #ff0;
+    background-color: #008;
+    background-image: url("scanlines.png");
+    white-space: pre;
+    content: "   /_/|_|\\__,_/_/   \\__, /  \A                    /____/   \A\A";
+}
+
+body > h2 + b {
+    background-color: #008;
+    background-image: url("scanlines.png");
+    color: #0ff;
+    display: block;
+    text-align: center;
+    -webkit-position: sticky;
+    position: sticky;
+    top: 90px;
+    z-index: 51;
+}
+
+body > h2 + b + p {
+    -webkit-position: sticky;
+    position: sticky;
+    top: 144px;
+    background-color: black;
+    z-index: 52
+}
+
+body > h2 > a {
+    display: block;
+    color: #000;
+}
+
+a {
+    color: #f80 !important;
+}
+
+a:hover {
+    background-color: #f80;
+    background-image: url("scanlines.png");
+    color: #fff;
+}
+
+h3 {
+    margin-top: 16px;
+    background-color: #808;
+    background-image: url("scanlines.png");
+    counter-increment: day;
+    counter-reset: bulletin;
+    -webkit-position: sticky;
+    position: sticky;
+    top: 162px;
+    background-color: black;
+    z-index: 54;
+}
+
+ol,
+ul {
+    padding-left: 24px;
+}
+
+body > ul {
+    margin-top: 0px;
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+body > ul > li:before {
+    display: block;
+    margin-top: 16px;
+    color: #ff0;
+    background-color: #088;
+    background-image: url("scanlines.png");
+    text-align: justify;
+    overflow: hidden;
+    white-space: nowrap;
+    content: attr(d) " ";
+    counter-increment: bulletin;
+    -webkit-position: sticky;
+    position: sticky;
+    top: 180px
+}
+
+body > ul > li:after {
+    color: #088;
+    text-decoration: underline overline blink;
+}
+
+body > ul + p:before {
+    display: block;
+    color: #08f;
+    white-space: pre;
+    overflow: hidden;
+    content: "\A------------------------------------------------------------------------------------------------------------------------------------------------------------";
+}
+
+blockquote {
+    background-color: #008;
+    background-image: url("scanlines.png");
+}
+
+blockquote:before {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #ff0;
+    background-color: #00f;
+    background-image: url("scanlines.png");
+    content: "------------------------------------------------------------------------------------------------------------------------------------------------------------";
+}
+
+blockquote:after {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #ff0;
+    background-color: #00f;
+    background-image: url("scanlines.png");
+    content: "------------------------------------------------------------------------------------------------------------------------------------------------------------";
+}
+
+p {
+    text-indent: 16px;
+}
